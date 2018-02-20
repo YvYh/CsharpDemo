@@ -1,2 +1,2 @@
 # CsharpDemo
-First C# erercise
+First C# exercise
