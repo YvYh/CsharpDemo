@@ -1,6 +1,7 @@
-﻿@{
+﻿@model FirstDemo.ViewModels.VoirEtuiantVM
+
+@{
     Layout = null;
-    ViewBag.Title = "VoirEtudiant";
 }
 
 <!DOCTYPE html>
@@ -8,11 +9,23 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title></title>
+    <title>Voir Etudiant</title>
 </head>
 <body>
     <div>
-    
+    Voici l'étudiant créé avec View Model:
+        <ul>
+            <li>@Model.Etudiant.NumInSee</li>
+            <li>@Model.Etudiant.Nom</li>
+            <li>@Model.Etudiant.Prenom</li>
+            <li>@Model.Etudiant.DateNaissance</li>
+        </ul>
+        <br />
+        @{Html.BeginForm("Index", "Home");}
+        @Html.Label("estMajeur","Cochez la case si vous êtes majeur")
+        @Html.CheckBox("estMajeur", true)
+        <input type="submit" value="Envoyer" />
+        @{Html.EndForm();}
     </div>
 </body>
 </html>

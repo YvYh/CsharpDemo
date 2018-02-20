@@ -7,5 +7,6 @@ namespace FirstDemo.ViewModels
 {
     public class VoirEtuiantVM
     {
+        public Models.Etudiant Etudiant { get; set; }
     }
 }
