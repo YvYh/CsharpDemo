@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using FirstDemo.Models;
+using FirstDemo.ViewModels;
 
 namespace FirstDemo.Controllers
 {
@@ -26,5 +28,24 @@ namespace FirstDemo.Controllers
 
             return View();
         }
+
+        public ActionResult VoirEtudiant()
+        {
+            DateTime dt = new DateTime();
+            Etudiant e = null;
+            
+            if (DateTime.TryParse("10/10/1970 05:20:00", out dt))
+                e = new Etudiant (1,"Dupont","Daniel",dt );
+            //ViewData["Etudiant"] = e;
+            //dynamic et = new Etudiant(2, "Guérin", "Gilles", dt);
+            //ViewBag["Etudiant"] = et;
+            VoirEtudiantVM vm = new VoirEtudiantVM
+            {
+                Etudiant = e
+            };
+            return View(vm);
+        }
+
+
     }
 }

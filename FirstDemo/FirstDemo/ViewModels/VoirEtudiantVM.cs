@@ -5,7 +5,7 @@ using System.Web;
 
 namespace FirstDemo.ViewModels
 {
-    public class VoirEtuiantVM
+    public class VoirEtudiantVM
     {
         public Models.Etudiant Etudiant { get; set; }
     }
