@@ -1,0 +1,31 @@
+﻿@model FirstAppliBDTN.Models.Etudiant
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VoirEtudiantCree</title>
+</head>
+<body>
+    <div>
+        Voici l'étudiant créé (via ViewData):
+        <ul>
+            <li>@(((FirstAppliBDTN.Models.Etudiant)ViewData["Etudiant"]).NumInsee)</li>
+            <li>@(((FirstAppliBDTN.Models.Etudiant)ViewData["Etudiant"]).Nom)</li>
+            <li>@(((FirstAppliBDTN.Models.Etudiant)ViewData["Etudiant"]).Prenom)</li>
+            <li>@(((FirstAppliBDTN.Models.Etudiant)ViewData["Etudiant"]).DateNaiss)</li>
+        </ul>
+        Voici l'étudiant créé (en dynamic):
+        <ul>
+            <li>@Model.NumInsee</li>
+            <li>@Model.Nom</li>
+            <li>@Model.Prenom</li>
+            <li>@Model.DateNaiss</li>
+        </ul>
+    </div>
+</body>
+</html>

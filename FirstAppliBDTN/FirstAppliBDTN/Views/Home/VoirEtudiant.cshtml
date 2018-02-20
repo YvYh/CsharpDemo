@@ -1,0 +1,31 @@
+﻿@model FirstAppliBDTN.ViewModels.VoirEtudiantVM
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VoirEtudiant</title>
+</head>
+<body>
+    <div>
+        Voici l'étudiant créé (avec ViewModel):
+        <ul>
+            <li>@Model.Etudiant.NumInsee</li>
+            <li>@Model.Etudiant.Nom</li>
+            <li>@Model.Etudiant.Prenom</li>
+            <li>@Model.Etudiant.DateNaiss</li>
+        </ul>
+        <br />
+        @{Html.BeginForm("Index", "Home");}
+        @Html.Label("estMajeur", "Cochez la case si vous êtes majeur")
+        @Html.CheckBox("estMajeur", true)
+        <input type="submit" value="Envoyer" />
+        @{Html.EndForm();}
+    </div>
+</body>
+</html>
